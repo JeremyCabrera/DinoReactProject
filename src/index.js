@@ -5,17 +5,40 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // Step 3 Add your const
+
 // Tip #1 add a copyright and the below command so the current year will automatically
 //        and is not hardcoded into index.js
 
 const currentDate = new Date();
 const year = currentDate.getFullYear();
 
+const date = new Date();
+const currentTime = date.getHours();
+
+// For greeting that will change based on what time of day it is
+
+let greeting;
+
+const customStyle1 = {
+  color: ""
+};
+
+if (currentTime < 12) {
+  greeting = "Good Morning";
+  customStyle1.color = "blue";
+} else if (currentTime < 18) {
+  greeting = "Good Afternoon";
+  customStyle1.color = "green";
+} else {
+  greeting = "Good Night";
+  customStyle1.color = "orange";
+}
+
 const fname = "Dino";
 const lname = "Nerds";
 const dino = "Carnotaurus";
 
-const customStyle = {
+const customStyle2 = {
   color: "blue",
   fontSize: "20px"
 };
@@ -24,10 +47,17 @@ const customStyle = {
 
 //Tip #2 use camelCase for classes
 
+// Render your application
+
 ReactDOM.render(
   <div>
-    <h1 className="heading" contentEditable="true" spellCheck="false">
-      Hello {fname} {lname}!
+    <h1
+      className="heading"
+      style={customStyle1}
+      contentEditable="true"
+      spellCheck="false"
+    >
+      {greeting} {fname} {lname}!
     </h1>
     <p>
       This is my first React.js project and this will be full of comments and
@@ -59,7 +89,7 @@ ReactDOM.render(
       alt="triceratops silouette"
     />
 
-    <h2 style={customStyle}>
+    <h2 style={customStyle2}>
       {" "}
       This is example of "Inline Styling" Carnotaurus
     </h2>
