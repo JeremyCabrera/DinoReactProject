@@ -4,6 +4,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+
 const fname = "Dino";
 const lname = "Nerds";
 const dino = "Carnotaurus";
@@ -12,7 +15,7 @@ const dino = "Carnotaurus";
 
 ReactDOM.render(
   <div>
-    <h1>
+    <h1 className="heading" contentEditable="true" spellCheck="false">
       Hello {fname} {lname}!
     </h1>
     <p>This is my first React.js project and I love it so far! Here's why:</p>
@@ -25,6 +28,25 @@ ReactDOM.render(
       So anyways, my favorite dinosaur is the {dino} because they have only
       discovered ONE fossil of it.
     </p>
+
+    <img
+      class="dino-img"
+      src="https://cdn.pixabay.com/photo/2017/09/28/09/26/dinosaur-2794840_1280.png"
+      alt="velociraptor silouette"
+    />
+    <img
+      class="dino-img"
+      src="https://cdn.pixabay.com/photo/2018/04/13/20/49/silhouette-3317569_1280.png"
+      alt="trex silouette"
+    />
+    <img
+      class="dino-img"
+      src="https://cdn.pixabay.com/photo/2018/04/13/20/49/silhouette-3317571_1280.png"
+      alt="triceratops silouette"
+    />
+
+    <p> Copyright {year}</p>
   </div>,
+
   document.getElementById("root")
 );
