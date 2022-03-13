@@ -4,6 +4,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+// Step 3 Add your const
+// Tip #1 add a copyright and the below command so the current year will automatically
+//        and is not hardcoded into index.js
+
 const currentDate = new Date();
 const year = currentDate.getFullYear();
 
@@ -11,14 +15,24 @@ const fname = "Dino";
 const lname = "Nerds";
 const dino = "Carnotaurus";
 
+const customStyle = {
+  color: "blue",
+  fontSize: "20px"
+};
+
 //Step 3 call (What you want Ex. <h1>, Where you want it Ex. "root")
+
+//Tip #2 use camelCase for classes
 
 ReactDOM.render(
   <div>
     <h1 className="heading" contentEditable="true" spellCheck="false">
       Hello {fname} {lname}!
     </h1>
-    <p>This is my first React.js project and I love it so far! Here's why:</p>
+    <p>
+      This is my first React.js project and this will be full of comments and
+      examples for me to reference for future projects.{" "}
+    </p>
     <ul>
       <li> Seems much cleaner code</li>
       <li> Way less code to write</li>
@@ -26,7 +40,7 @@ ReactDOM.render(
     </ul>
     <p>
       So anyways, my favorite dinosaur is the {dino} because they have only
-      discovered ONE fossil of it.
+      discovered ONE fossil of it. Below is how you add images in JSX.
     </p>
 
     <img
@@ -45,7 +59,12 @@ ReactDOM.render(
       alt="triceratops silouette"
     />
 
-    <p> Copyright {year}</p>
+    <h2 style={customStyle}>
+      {" "}
+      This is example of "Inline Styling" Carnotaurus
+    </h2>
+
+    <p> Copyright DinoDevOps {year}</p>
   </div>,
 
   document.getElementById("root")
