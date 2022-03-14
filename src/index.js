@@ -3,8 +3,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-
-// Step 3 Add your const
+import Heading2 from "./Heading2";
 
 // Tip #1 add a copyright and the below command so the current year will automatically
 //        and is not hardcoded into index.js
@@ -43,7 +42,7 @@ const customStyle2 = {
   fontSize: "20px"
 };
 
-//Step 3 call (What you want Ex. <h1>, Where you want it Ex. "root")
+//Step 3 call (What you want Ex. , Where you want it Ex. "root")
 
 //Tip #2 use camelCase for classes
 
@@ -59,6 +58,9 @@ ReactDOM.render(
     >
       {greeting} {fname} {lname}!
     </h1>
+
+    <Heading2 />
+
     <p>
       This is my first React.js project and this will be full of comments and
       examples for me to reference for future projects.{" "}
@@ -72,7 +74,6 @@ ReactDOM.render(
       So anyways, my favorite dinosaur is the {dino} because they have only
       discovered ONE fossil of it. Below is how you add images in JSX.
     </p>
-
     <img
       class="dino-img"
       src="https://cdn.pixabay.com/photo/2017/09/28/09/26/dinosaur-2794840_1280.png"
@@ -88,12 +89,10 @@ ReactDOM.render(
       src="https://cdn.pixabay.com/photo/2018/04/13/20/49/silhouette-3317571_1280.png"
       alt="triceratops silouette"
     />
-
-    <h2 style={customStyle2}>
+    <h3 style={customStyle2}>
       {" "}
       This is example of "Inline Styling" Carnotaurus
-    </h2>
-
+    </h3>
     <p> Copyright DinoDevOps {year}</p>
   </div>,
 
