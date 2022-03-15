@@ -1,9 +1,7 @@
-//Step 1 Add the React Dependencies on left bar
-//Step 2 Import them using command below
-
 import React from "react";
 import ReactDOM from "react-dom";
 import Heading2 from "./Heading2";
+import List from "./List";
 
 // Tip #1 add a copyright and the below command so the current year will automatically
 //        and is not hardcoded into index.js
@@ -65,11 +63,9 @@ ReactDOM.render(
       This is my first React.js project and this will be full of comments and
       examples for me to reference for future projects.{" "}
     </p>
-    <ul>
-      <li> Seems much cleaner code</li>
-      <li> Way less code to write</li>
-      <li> Easier to debug due to less code</li>
-    </ul>
+
+    <List />
+
     <p>
       So anyways, my favorite dinosaur is the {dino} because they have only
       discovered ONE fossil of it. Below is how you add images in JSX.
